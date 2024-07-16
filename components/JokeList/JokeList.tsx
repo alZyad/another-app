@@ -1,22 +1,34 @@
+import { useState } from "react";
 import data from "../../mockData.json";
 import { JokeType } from "../../types/joke.types";
 import Error from "../Error/Error";
 import JokePreview from "../JokePreview/JokePreview";
-import { StyleSheet, ScrollView } from "react-native";
+import { StyleSheet, ScrollView, View, TextInput } from "react-native";
 
 export default function JokeList() {
+  const [searchTerm, setSearchTerm] = useState("");
+
   const { error, jokes }: { error: boolean; jokes: JokeType[] } = data;
   if (error) return <Error />;
   return (
-    <ScrollView contentContainerStyle={styles.listContent} style={styles.scrollList}>
-      {jokes.map((jokeData) => (
-        <JokePreview {...jokeData} />
-      ))}
-    </ScrollView>
+    <View style={styles.container}>
+      <TextInput style={styles.input} value={searchTerm} onChangeText={setSearchTerm} />
+      <ScrollView contentContainerStyle={styles.listContent} style={styles.scrollList}>
+        {jokes.map((jokeData) => (
+          <JokePreview {...jokeData} />
+        ))}
+      </ScrollView>
+    </View>
   );
 }
 
 const styles = StyleSheet.create({
+  input: {
+    height: 40,
+    margin: 12,
+    borderWidth: 1,
+    padding: 10,
+  },
   listContent: {
     display: "flex",
     flexDirection: "row",
@@ -25,7 +37,9 @@ const styles = StyleSheet.create({
     gap: 25,
   },
   scrollList: {
-    paddingTop: 30,
     width: "100%",
+  },
+  container: {
+    paddingTop: 30,
   },
 });
