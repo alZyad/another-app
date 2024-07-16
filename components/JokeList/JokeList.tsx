@@ -12,15 +12,11 @@ export default function JokeList() {
   if (error) return <Error />;
   return (
     <View style={styles.container}>
-      <TextInput style={styles.input} value={searchTerm} onChangeText={setSearchTerm} testID="searchInput" />
+      <TextInput style={styles.input} value={searchTerm} onChangeText={setSearchTerm} />
       <ScrollView contentContainerStyle={styles.listContent} style={styles.scrollList}>
-        {jokes
-          .filter((jokeData) =>
-            ((jokeData?.joke || "") + (jokeData?.delivery || "") + (jokeData?.setup || ""))?.toLowerCase().includes(searchTerm.toLowerCase())
-          )
-          .map((jokeData) => (
-            <JokePreview {...jokeData} key={jokeData.id} />
-          ))}
+        {jokes.map((jokeData) => (
+          <JokePreview {...jokeData} />
+        ))}
       </ScrollView>
     </View>
   );

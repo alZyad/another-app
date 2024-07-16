@@ -1,5 +1,5 @@
+import { JokeType } from "../JokeList/JokeList";
 import { StyleSheet, Text, View } from "react-native";
-import { JokeType } from "../../types/joke.types";
 
 export default function JokePreview(jokeData: JokeType) {
   const preview = (jokeData.joke || jokeData.setup)
@@ -8,7 +8,7 @@ export default function JokePreview(jokeData: JokeType) {
     .slice(0, 4)
     .join(" ");
   return (
-    <View style={styles.container} testID="jokePreview">
+    <View style={styles.container}>
       <Text>{preview}</Text>
     </View>
   );
