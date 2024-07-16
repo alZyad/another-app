@@ -1,344 +1,384 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`renders correctly 1`] = `
-<RCTScrollView
-  contentContainerStyle={
-    {
-      "display": "flex",
-      "flexDirection": "row",
-      "flexWrap": "wrap",
-      "gap": 25,
-      "justifyContent": "center",
-    }
-  }
+exports[`> JokeList renders correctly 1`] = `
+<View
   style={
     {
       "paddingTop": 30,
-      "width": "100%",
     }
   }
 >
-  <View>
-    <View
-      style={
-        {
-          "borderColor": "black",
-          "borderRadius": 5,
-          "borderWidth": 1,
-          "height": 50,
-          "padding": 5,
-          "width": 150,
-        }
+  <TextInput
+    onChangeText={[Function]}
+    style={
+      {
+        "borderWidth": 1,
+        "height": 40,
+        "margin": 12,
+        "padding": 10,
       }
-    >
-      <Text>
-        Hey wanna hear a
-      </Text>
-    </View>
-    <View
-      style={
-        {
-          "borderColor": "black",
-          "borderRadius": 5,
-          "borderWidth": 1,
-          "height": 50,
-          "padding": 5,
-          "width": 150,
-        }
+    }
+    testID="searchInput"
+    value=""
+  />
+  <RCTScrollView
+    contentContainerStyle={
+      {
+        "display": "flex",
+        "flexDirection": "row",
+        "flexWrap": "wrap",
+        "gap": 25,
+        "justifyContent": "center",
       }
-    >
-      <Text>
-        Why is 6 afraid
-      </Text>
-    </View>
-    <View
-      style={
-        {
-          "borderColor": "black",
-          "borderRadius": 5,
-          "borderWidth": 1,
-          "height": 50,
-          "padding": 5,
-          "width": 150,
-        }
+    }
+    style={
+      {
+        "width": "100%",
       }
-    >
-      <Text>
-        Ive got a really
-      </Text>
-    </View>
-    <View
-      style={
-        {
-          "borderColor": "black",
-          "borderRadius": 5,
-          "borderWidth": 1,
-          "height": 50,
-          "padding": 5,
-          "width": 150,
+    }
+  >
+    <View>
+      <View
+        style={
+          {
+            "borderColor": "black",
+            "borderRadius": 5,
+            "borderWidth": 1,
+            "height": 50,
+            "padding": 5,
+            "width": 150,
+          }
         }
-      }
-    >
-      <Text>
-        Programming is like sex
-      </Text>
-    </View>
-    <View
-      style={
-        {
-          "borderColor": "black",
-          "borderRadius": 5,
-          "borderWidth": 1,
-          "height": 50,
-          "padding": 5,
-          "width": 150,
+        testID="jokePreview"
+      >
+        <Text>
+          Hey wanna hear a
+        </Text>
+      </View>
+      <View
+        style={
+          {
+            "borderColor": "black",
+            "borderRadius": 5,
+            "borderWidth": 1,
+            "height": 50,
+            "padding": 5,
+            "width": 150,
+          }
         }
-      }
-    >
-      <Text>
-        A SQL statement walks
-      </Text>
-    </View>
-    <View
-      style={
-        {
-          "borderColor": "black",
-          "borderRadius": 5,
-          "borderWidth": 1,
-          "height": 50,
-          "padding": 5,
-          "width": 150,
+        testID="jokePreview"
+      >
+        <Text>
+          Why is 6 afraid
+        </Text>
+      </View>
+      <View
+        style={
+          {
+            "borderColor": "black",
+            "borderRadius": 5,
+            "borderWidth": 1,
+            "height": 50,
+            "padding": 5,
+            "width": 150,
+          }
         }
-      }
-    >
-      <Text>
-        Your mamas so FAT
-      </Text>
-    </View>
-    <View
-      style={
-        {
-          "borderColor": "black",
-          "borderRadius": 5,
-          "borderWidth": 1,
-          "height": 50,
-          "padding": 5,
-          "width": 150,
+        testID="jokePreview"
+      >
+        <Text>
+          Ive got a really
+        </Text>
+      </View>
+      <View
+        style={
+          {
+            "borderColor": "black",
+            "borderRadius": 5,
+            "borderWidth": 1,
+            "height": 50,
+            "padding": 5,
+            "width": 150,
+          }
         }
-      }
-    >
-      <Text>
-        A guy walks into
-      </Text>
-    </View>
-    <View
-      style={
-        {
-          "borderColor": "black",
-          "borderRadius": 5,
-          "borderWidth": 1,
-          "height": 50,
-          "padding": 5,
-          "width": 150,
+        testID="jokePreview"
+      >
+        <Text>
+          Programming is like sex
+        </Text>
+      </View>
+      <View
+        style={
+          {
+            "borderColor": "black",
+            "borderRadius": 5,
+            "borderWidth": 1,
+            "height": 50,
+            "padding": 5,
+            "width": 150,
+          }
         }
-      }
-    >
-      <Text>
-        Java and C were
-      </Text>
-    </View>
-    <View
-      style={
-        {
-          "borderColor": "black",
-          "borderRadius": 5,
-          "borderWidth": 1,
-          "height": 50,
-          "padding": 5,
-          "width": 150,
+        testID="jokePreview"
+      >
+        <Text>
+          A SQL statement walks
+        </Text>
+      </View>
+      <View
+        style={
+          {
+            "borderColor": "black",
+            "borderRadius": 5,
+            "borderWidth": 1,
+            "height": 50,
+            "padding": 5,
+            "width": 150,
+          }
         }
-      }
-    >
-      <Text>
-        Why did the web
-      </Text>
-    </View>
-    <View
-      style={
-        {
-          "borderColor": "black",
-          "borderRadius": 5,
-          "borderWidth": 1,
-          "height": 50,
-          "padding": 5,
-          "width": 150,
+        testID="jokePreview"
+      >
+        <Text>
+          Your mamas so FAT
+        </Text>
+      </View>
+      <View
+        style={
+          {
+            "borderColor": "black",
+            "borderRadius": 5,
+            "borderWidth": 1,
+            "height": 50,
+            "padding": 5,
+            "width": 150,
+          }
         }
-      }
-    >
-      <Text>
-        How many programmers does
-      </Text>
-    </View>
-    <View
-      style={
-        {
-          "borderColor": "black",
-          "borderRadius": 5,
-          "borderWidth": 1,
-          "height": 50,
-          "padding": 5,
-          "width": 150,
+        testID="jokePreview"
+      >
+        <Text>
+          A guy walks into
+        </Text>
+      </View>
+      <View
+        style={
+          {
+            "borderColor": "black",
+            "borderRadius": 5,
+            "borderWidth": 1,
+            "height": 50,
+            "padding": 5,
+            "width": 150,
+          }
         }
-      }
-    >
-      <Text>
-        Why did the programmer
-      </Text>
-    </View>
-    <View
-      style={
-        {
-          "borderColor": "black",
-          "borderRadius": 5,
-          "borderWidth": 1,
-          "height": 50,
-          "padding": 5,
-          "width": 150,
+        testID="jokePreview"
+      >
+        <Text>
+          Java and C were
+        </Text>
+      </View>
+      <View
+        style={
+          {
+            "borderColor": "black",
+            "borderRadius": 5,
+            "borderWidth": 1,
+            "height": 50,
+            "padding": 5,
+            "width": 150,
+          }
         }
-      }
-    >
-      <Text>
-        Why are modern programming
-      </Text>
-    </View>
-    <View
-      style={
-        {
-          "borderColor": "black",
-          "borderRadius": 5,
-          "borderWidth": 1,
-          "height": 50,
-          "padding": 5,
-          "width": 150,
+        testID="jokePreview"
+      >
+        <Text>
+          Why did the web
+        </Text>
+      </View>
+      <View
+        style={
+          {
+            "borderColor": "black",
+            "borderRadius": 5,
+            "borderWidth": 1,
+            "height": 50,
+            "padding": 5,
+            "width": 150,
+          }
         }
-      }
-    >
-      <Text>
-        What do you get
-      </Text>
-    </View>
-    <View
-      style={
-        {
-          "borderColor": "black",
-          "borderRadius": 5,
-          "borderWidth": 1,
-          "height": 50,
-          "padding": 5,
-          "width": 150,
+        testID="jokePreview"
+      >
+        <Text>
+          How many programmers does
+        </Text>
+      </View>
+      <View
+        style={
+          {
+            "borderColor": "black",
+            "borderRadius": 5,
+            "borderWidth": 1,
+            "height": 50,
+            "padding": 5,
+            "width": 150,
+          }
         }
-      }
-    >
-      <Text>
-        How do you know
-      </Text>
-    </View>
-    <View
-      style={
-        {
-          "borderColor": "black",
-          "borderRadius": 5,
-          "borderWidth": 1,
-          "height": 50,
-          "padding": 5,
-          "width": 150,
+        testID="jokePreview"
+      >
+        <Text>
+          Why did the programmer
+        </Text>
+      </View>
+      <View
+        style={
+          {
+            "borderColor": "black",
+            "borderRadius": 5,
+            "borderWidth": 1,
+            "height": 50,
+            "padding": 5,
+            "width": 150,
+          }
         }
-      }
-    >
-      <Text>
-        Two C strings walk
-      </Text>
-    </View>
-    <View
-      style={
-        {
-          "borderColor": "black",
-          "borderRadius": 5,
-          "borderWidth": 1,
-          "height": 50,
-          "padding": 5,
-          "width": 150,
+        testID="jokePreview"
+      >
+        <Text>
+          Why are modern programming
+        </Text>
+      </View>
+      <View
+        style={
+          {
+            "borderColor": "black",
+            "borderRadius": 5,
+            "borderWidth": 1,
+            "height": 50,
+            "padding": 5,
+            "width": 150,
+          }
         }
-      }
-    >
-      <Text>
-        Why do programmers confuse
-      </Text>
-    </View>
-    <View
-      style={
-        {
-          "borderColor": "black",
-          "borderRadius": 5,
-          "borderWidth": 1,
-          "height": 50,
-          "padding": 5,
-          "width": 150,
+        testID="jokePreview"
+      >
+        <Text>
+          What do you get
+        </Text>
+      </View>
+      <View
+        style={
+          {
+            "borderColor": "black",
+            "borderRadius": 5,
+            "borderWidth": 1,
+            "height": 50,
+            "padding": 5,
+            "width": 150,
+          }
         }
-      }
-    >
-      <Text>
-        What do you call
-      </Text>
-    </View>
-    <View
-      style={
-        {
-          "borderColor": "black",
-          "borderRadius": 5,
-          "borderWidth": 1,
-          "height": 50,
-          "padding": 5,
-          "width": 150,
+        testID="jokePreview"
+      >
+        <Text>
+          How do you know
+        </Text>
+      </View>
+      <View
+        style={
+          {
+            "borderColor": "black",
+            "borderRadius": 5,
+            "borderWidth": 1,
+            "height": 50,
+            "padding": 5,
+            "width": 150,
+          }
         }
-      }
-    >
-      <Text>
-        Java is like Alzheimers
-      </Text>
-    </View>
-    <View
-      style={
-        {
-          "borderColor": "black",
-          "borderRadius": 5,
-          "borderWidth": 1,
-          "height": 50,
-          "padding": 5,
-          "width": 150,
+        testID="jokePreview"
+      >
+        <Text>
+          Two C strings walk
+        </Text>
+      </View>
+      <View
+        style={
+          {
+            "borderColor": "black",
+            "borderRadius": 5,
+            "borderWidth": 1,
+            "height": 50,
+            "padding": 5,
+            "width": 150,
+          }
         }
-      }
-    >
-      <Text>
-        Why does no one
-      </Text>
-    </View>
-    <View
-      style={
-        {
-          "borderColor": "black",
-          "borderRadius": 5,
-          "borderWidth": 1,
-          "height": 50,
-          "padding": 5,
-          "width": 150,
+        testID="jokePreview"
+      >
+        <Text>
+          Why do programmers confuse
+        </Text>
+      </View>
+      <View
+        style={
+          {
+            "borderColor": "black",
+            "borderRadius": 5,
+            "borderWidth": 1,
+            "height": 50,
+            "padding": 5,
+            "width": 150,
+          }
         }
-      }
-    >
-      <Text>
-        Why did the Python
-      </Text>
+        testID="jokePreview"
+      >
+        <Text>
+          What do you call
+        </Text>
+      </View>
+      <View
+        style={
+          {
+            "borderColor": "black",
+            "borderRadius": 5,
+            "borderWidth": 1,
+            "height": 50,
+            "padding": 5,
+            "width": 150,
+          }
+        }
+        testID="jokePreview"
+      >
+        <Text>
+          Java is like Alzheimers
+        </Text>
+      </View>
+      <View
+        style={
+          {
+            "borderColor": "black",
+            "borderRadius": 5,
+            "borderWidth": 1,
+            "height": 50,
+            "padding": 5,
+            "width": 150,
+          }
+        }
+        testID="jokePreview"
+      >
+        <Text>
+          Why does no one
+        </Text>
+      </View>
+      <View
+        style={
+          {
+            "borderColor": "black",
+            "borderRadius": 5,
+            "borderWidth": 1,
+            "height": 50,
+            "padding": 5,
+            "width": 150,
+          }
+        }
+        testID="jokePreview"
+      >
+        <Text>
+          Why did the Python
+        </Text>
+      </View>
     </View>
-  </View>
-</RCTScrollView>
+  </RCTScrollView>
+</View>
 `;
