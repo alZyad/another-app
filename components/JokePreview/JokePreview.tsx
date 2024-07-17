@@ -3,13 +3,14 @@ import { JokeType } from "../../types/joke.types";
 
 export default function JokePreview(jokeData: JokeType) {
   const preview = (jokeData.joke || jokeData.setup)
-    ?.replace(/[^0-9a-z\s]/gi, "")
+    ?.replace(/[\s]/gi, " ")
+    .replace(/[^0-9a-z ']/gi, "")
     .split(" ")
     .slice(0, 4)
     .join(" ");
   return (
     <View style={styles.container} testID="jokePreview">
-      <Text>{preview}</Text>
+      <Text>{preview}...</Text>
     </View>
   );
 }
