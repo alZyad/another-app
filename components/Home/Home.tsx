@@ -37,6 +37,8 @@ export default function Home() {
   const [searchTerm, setSearchTerm] = useState("");
   const [loadJokes, setLoadJokes] = useState(0);
   const [data, setData] = useState<DataType>();
+  const [bookmarkedJokes, setBookmarkedJokes] = useState<number[]>([]);
+
   useEffect(() => {
     getJokes(searchTerm).then((receivedData) => {
       if (!receivedData) return;
@@ -49,7 +51,6 @@ export default function Home() {
     getJokes(searchTerm).then((receivedData) => {
       if (!receivedData) return;
       const mergedRequests = mergeReceivedData(receivedData[0], receivedData[1]);
-      console.log("going to set data");
       setData((prevValue) => mergeReceivedData(mergedRequests, prevValue));
     });
   }, [loadJokes, searchTerm]);
@@ -58,7 +59,7 @@ export default function Home() {
   return (
     <View style={styles.container}>
       <TextInput style={styles.input} value={searchTerm} onChangeText={setSearchTerm} testID="searchInput" />
-      <JokeList {...data} setLoadJokes={setLoadJokes} />
+      <JokeList {...data} setLoadJokes={setLoadJokes} bookmarkState={[bookmarkedJokes, setBookmarkedJokes]} />
     </View>
   );
 }
