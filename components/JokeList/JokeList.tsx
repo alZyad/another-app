@@ -1,49 +1,67 @@
-import { useState } from "react";
-import data from "../../mockData.json";
 import { JokeType } from "../../types/joke.types";
 import Error from "../Error/Error";
 import JokePreview from "../JokePreview/JokePreview";
-import { StyleSheet, ScrollView, View, TextInput } from "react-native";
+import { StyleSheet, ScrollView, View, NativeScrollEvent } from "react-native";
+import EmptyList from "../EmptyList/EmptyList";
+import { Dispatch, SetStateAction, useState } from "react";
 
-export default function JokeList() {
-  const [searchTerm, setSearchTerm] = useState("");
+const isCloseToBottom = ({ layoutMeasurement, contentOffset, contentSize }: NativeScrollEvent) => {
+  const paddingToBottom = 20;
+  return layoutMeasurement.height + contentOffset.y >= contentSize.height - paddingToBottom;
+};
 
-  const { error, jokes }: { error: boolean; jokes: JokeType[] } = data;
-  if (error) return <Error />;
+export default function JokeList({
+  error,
+  jokes,
+  message,
+  setLoadJokes,
+}: {
+  error: boolean;
+  jokes: JokeType[];
+  message?: string;
+  setLoadJokes: Dispatch<SetStateAction<number>>;
+}) {
+  const [atBottom, setAtBottom] = useState(false);
+
+  if (error && message === "No matching joke found") {
+    return <EmptyList />;
+  }
+  if (error && message !== "No matching joke found") return <Error />;
   return (
-    <View style={styles.container}>
-      <TextInput style={styles.input} value={searchTerm} onChangeText={setSearchTerm} testID="searchInput" />
-      <ScrollView contentContainerStyle={styles.listContent} style={styles.scrollList}>
-        {jokes
-          .filter((jokeData) =>
-            ((jokeData?.joke || "") + (jokeData?.delivery || "") + (jokeData?.setup || ""))?.toLowerCase().includes(searchTerm.toLowerCase())
-          )
-          .map((jokeData) => (
-            <JokePreview {...jokeData} key={jokeData.id} />
-          ))}
-      </ScrollView>
-    </View>
+    <ScrollView
+      contentContainerStyle={styles.listContent}
+      style={styles.scrollList}
+      onScroll={({ nativeEvent }) => {
+        if (!atBottom && isCloseToBottom(nativeEvent)) {
+          setLoadJokes((prevValue) => prevValue + 1);
+        }
+        setAtBottom(isCloseToBottom(nativeEvent));
+      }}
+    >
+      {jokes.map((jokeData) => (
+        <JokePreview {...jokeData} key={jokeData.id} />
+      ))}
+      {jokes.length % 2 === 1 && <View style={styles.emptyPreview} />}
+    </ScrollView>
   );
 }
 
 const styles = StyleSheet.create({
-  input: {
-    height: 40,
-    margin: 12,
-    borderWidth: 1,
-    padding: 10,
-  },
   listContent: {
     display: "flex",
     flexDirection: "row",
     flexWrap: "wrap",
     justifyContent: "center",
     gap: 25,
+    paddingTop: 20,
+    paddingBottom: 50,
   },
   scrollList: {
     width: "100%",
   },
-  container: {
-    paddingTop: 30,
+  emptyPreview: {
+    padding: 5,
+    width: 150,
+    height: 50,
   },
 });

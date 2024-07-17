@@ -1,4 +1,5 @@
 export type JokeType = {
+  error: boolean;
   category: string; // "Programming" | "Misc" | "Dark" | "Pun" | "Spooky" | "Christmas";
   type: string; // "single" | "twopart";
   joke?: string;
@@ -15,4 +16,22 @@ export type JokeType = {
   id: number;
   safe: boolean;
   lang: string; // "en";
+  internalError?: boolean;
+  code?: number;
+  message?: string;
+  causedBy?: string[];
+  additionalInfo?: string;
+  timestamp?: number;
+};
+
+export type DataType = {
+  error: boolean;
+  amount: number;
+  jokes: JokeType[];
+  internalError?: boolean;
+  code?: number;
+  message?: string;
+  causedBy?: string[];
+  additionalInfo?: string;
+  timestamp?: number;
 };

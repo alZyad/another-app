@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`> Home renders correctly 1`] = `
+<View
+  style={
+    {
+      "alignContent": "center",
+      "display": "flex",
+      "height": "100%",
+      "justifyContent": "center",
+      "width": "100%",
+    }
+  }
+>
+  <Text
+    style={
+      {
+        "textAlign": "center",
+      }
+    }
+  >
+    No jokes here, look away
+  </Text>
+</View>
+`;
